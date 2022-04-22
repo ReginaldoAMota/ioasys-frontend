@@ -1,0 +1,104 @@
+.booksPage {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 5rem 10rem 10rem 10rem;
+  background: url(../../public/images/bg1.png), url(../../public/images/bg2.png);
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+
+  font-family: "Heebo", sans-serif;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 1rem 0;
+}
+.logo {
+  color: #333333;
+  font-size: 4.5rem;
+}
+.nav h1 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  color: #333333;
+}
+.nav div {
+  font-size: 2rem;
+  font-weight: 400;
+
+  display: flex;
+  align-items: center;
+}
+.nav div span span {
+  font-weight: bold;
+}
+
+.circle {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  border: 1px solid #333333;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 1rem;
+
+  cursor: pointer;
+}
+.booksCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 18rem);
+  gap: 2rem;
+}
+.pagination {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 2rem 0;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1320px) {
+  .booksPage {
+    padding: 0rem 8rem 10rem 8rem;
+    height: auto;
+  }
+  .booksCards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: repeat(4, 20rem);
+  }
+}
+@media screen and (max-width: 1000px) {
+  .booksPage {
+    padding: 0rem 4rem 10rem 4rem;
+    height: auto;
+  }
+  .booksCards {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 20rem);
+  }
+}
+@media screen and (max-width: 640px) {
+  .booksPage {
+    padding: 0 2rem 0rem 2rem;
+    height: auto;
+  }
+  .booksCards {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(12, 20rem);
+  }
+  .pagination {
+    justify-content: center;
+  }
+}
